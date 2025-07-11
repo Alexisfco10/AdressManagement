@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Services;
 
-public class CustomerService(IRepository<Customer> repository, IMapper<Customer, CustomerDto, CustomerInsert, CustomerUpdate> mapper) 
+public class CustomerService(ICustomerRepository repository, IMapper<Customer, CustomerDto, CustomerInsert, CustomerUpdate> mapper) 
     : BaseService<Customer, CustomerDto, CustomerInsert, CustomerUpdate>(repository, mapper)
 {
     private readonly IRepository<Customer> _repository = repository;

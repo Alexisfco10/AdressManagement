@@ -5,7 +5,7 @@ using Domain.Models;
 
 namespace Application.Services;
 
-public class AddressService(IRepository<Address> repository, IMapper<Address, AddressDto, AddressInsert, AddressUpdate> mapper) 
+public class AddressService(IAddressRepository repository, IMapper<Address, AddressDto, AddressInsert, AddressUpdate> mapper) 
     : BaseService<Address, AddressDto, AddressInsert, AddressUpdate>(repository, mapper)
 {
     
