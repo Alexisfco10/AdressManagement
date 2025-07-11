@@ -9,7 +9,7 @@ namespace Web.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class AddressController(
-    IService<Address, AddressDto, AddressInsert, AddressUpdate> service,
+    IAddressService service,
     IValidator<AddressInsert> insertValidator,
     IValidator<AddressUpdate> updateValidator
     ) : ControllerBase

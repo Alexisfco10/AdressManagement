@@ -4,7 +4,7 @@ using Domain.Models;
 
 namespace Application.Shared.Mappers;
 
-public class AddressMapper : IMapper<Address, AddressDto, AddressInsert, AddressUpdate>
+public class AddressMapper : IAddressMapper
 {
     public Address ToModel(AddressDto dto)
     {

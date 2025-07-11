@@ -9,7 +9,7 @@ namespace Web.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class CustomerController(
-    IService<Customer, CustomerDto, CustomerInsert, CustomerUpdate> service,
+    ICustomerService service,
     IValidator<CustomerInsert> insertValidator,
     IValidator<CustomerUpdate> updateValidator
     ) : ControllerBase

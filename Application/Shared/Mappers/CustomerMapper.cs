@@ -6,7 +6,7 @@ using Domain.Models;
 
 namespace Application.Shared.Mappers;
 
-public class CustomerMapper : IMapper<Customer, CustomerDto, CustomerInsert, CustomerUpdate> 
+public class CustomerMapper : ICustomerMapper
 {
     private static readonly string DateFormat = "dd/MM/yyyy";
 

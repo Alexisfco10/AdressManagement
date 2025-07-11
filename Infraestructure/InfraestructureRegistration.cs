@@ -18,7 +18,7 @@ public static class ServiceRegistration
     
     public static void AddRepositories(this IServiceCollection svc)
     {
-        svc.AddScoped<IRepository<Address>, AddressRepository>();
-        svc.AddScoped<IRepository<Customer>, CustomerRepository>();
+        svc.AddScoped<IAddressRepository, AddressRepository>();
+        svc.AddScoped<ICustomerRepository, CustomerRepository>();
     }
 }

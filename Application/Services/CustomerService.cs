@@ -1,14 +1,15 @@
 using System.Linq.Expressions;
 using Application.Dtos.Customer;
 using Application.Repository;
+using Application.Services.Interface;
 using Application.Shared.Mappers.Interface;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Services;
 
-public class CustomerService(ICustomerRepository repository, IMapper<Customer, CustomerDto, CustomerInsert, CustomerUpdate> mapper) 
-    : BaseService<Customer, CustomerDto, CustomerInsert, CustomerUpdate>(repository, mapper)
+public class CustomerService(ICustomerRepository repository, ICustomerMapper mapper) 
+    : BaseService<Customer, CustomerDto, CustomerInsert, CustomerUpdate>(repository, mapper), ICustomerService
 {
     private readonly IRepository<Customer> _repository = repository;
     private readonly IMapper<Customer, CustomerDto, CustomerInsert, CustomerUpdate> _mapper = mapper;

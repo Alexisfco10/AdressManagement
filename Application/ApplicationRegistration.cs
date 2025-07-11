@@ -25,13 +25,13 @@ public static class ApplicationRegistration
 
     public static void AddServices(this IServiceCollection svc)
     {
-        svc.AddScoped<IService<Address, AddressDto, AddressInsert, AddressUpdate>, AddressService>();
-        svc.AddScoped<IService<Customer, CustomerDto, CustomerInsert, CustomerUpdate>, CustomerService>();
+        svc.AddScoped<IAddressService, AddressService>();
+        svc.AddScoped<ICustomerService, CustomerService>();
     }
     
     public static void AddMappers(this IServiceCollection svc)
     {
-        svc.AddScoped<IMapper<Address, AddressDto, AddressInsert, AddressUpdate>, AddressMapper>();
-        svc.AddScoped<IMapper<Customer, CustomerDto, CustomerInsert, CustomerUpdate>, CustomerMapper>();
+        svc.AddScoped<IAddressMapper, AddressMapper>();
+        svc.AddScoped<ICustomerMapper, CustomerMapper>();
     }
 }
